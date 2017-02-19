@@ -12,9 +12,9 @@ package lab1;
 public class College {
      private CollegeCatalog catalog;
      private PrintReport printReport;
-     
+     private String collegeName;
 
-    public College() {
+    public College(String collegeName) {
         this.catalog = new CollegeCatalog();
         this.printReport = new PrintReport();
         
@@ -34,7 +34,16 @@ public class College {
     
     public void printCatalog(){
         for (SoftwareProgrammingCourse c : catalog.getProgrammingCource() ){
-            printReport.printReport("Course Name : " + c.getCourseName());
+            printReport.printReport("Course Name : " + c.getCourseName()+" Couse Number: "+ c.getCourseNumber()+" " + 
+                    "Credit:"+ c.getCredits()+ " " + " Prerequisites:" + c.getPrerequisites() );
         }
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
     }
 }
