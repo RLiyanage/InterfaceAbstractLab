@@ -13,16 +13,23 @@ import java.util.List;
  * @author Sanuth
  */
 public class CollegeCatalog {
-private List<SoftwareProgrammingCourse> programmingCource;
+
+    private List<SoftwareProgrammingCourse> programmingCource;
+
     public CollegeCatalog() {
         this.programmingCource = new ArrayList();
     }
-  public void addCourses(SoftwareProgrammingCourse course) {
-      this.programmingCource.add(course);
-  } 
+
+    public void addCourse(SoftwareProgrammingCourse course) {
+        this.programmingCource.add(course);
+    }
+
+    public void setProgrammingCource(List<SoftwareProgrammingCourse> programmingCource) {
+        this.programmingCource = programmingCource;
+    }
 
     public List<SoftwareProgrammingCourse> getProgrammingCource() {
         return programmingCource;
     }
-    
+
 }

@@ -10,33 +10,31 @@ import javax.swing.JOptionPane;
  */
 public class AdvancedJavaCourse extends SoftwareProgrammingCourse {
 
-    private double credits;
     private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber,double credits) {
-        super(courseName, courseNumber,credits);
+    public AdvancedJavaCourse(String courseName, String courseNumber, double credits) {
+        super(courseName, courseNumber, credits);
     }
 
+    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
+    @Override
     public void setPrerequisites(String prerequisites) {
         if (prerequisites == null || prerequisites.length() == 0) {
-            
             throw new IllegalArgumentException("Error: prerequisites cannot be null of empty string");
-            
         }
         this.prerequisites = prerequisites;
     }
 
+    @Override
     public void setCredits(double credits) {
         if (credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
+            throw new IllegalArgumentException("Error: credits must be in the range 0.5 to 4.0");
         }
-        this.setCredits(credits);
+        super.setCredits(credits);
     }
 
     @Override
@@ -47,4 +45,11 @@ public class AdvancedJavaCourse extends SoftwareProgrammingCourse {
         super.setCourseNumber(courseNumber);
     }
 
+    @Override
+    public final void setCourseName(String courseName) {
+        if (courseName == null || courseName.length() == 0) {
+            throw new IllegalArgumentException("Error: courseName cannot be null of empty string");
+        }
+        super.setCourseName(courseName);
+    }
 }

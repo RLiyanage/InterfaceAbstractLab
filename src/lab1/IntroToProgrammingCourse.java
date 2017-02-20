@@ -31,11 +31,10 @@ public class IntroToProgrammingCourse extends SoftwareProgrammingCourse {
         super.setCredits(credits);
     }
 
+    @Override
     public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            
-          throw new IllegalArgumentException("Error: courseName cannot be null of empty string");
-           
+        if(courseName == null || courseName.length() == 0) {            
+          throw new IllegalArgumentException("Error: courseName cannot be null of empty string");           
         }
         super.setCourseName(courseName); 
     }

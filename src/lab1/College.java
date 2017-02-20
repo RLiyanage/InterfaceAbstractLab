@@ -12,7 +12,7 @@ package lab1;
 public class College {
      private CollegeCatalog catalog;
      private PrintReport printReport;
-     private String collegeName;
+     private String name;
 
     public College(String collegeName) {
         this.catalog = new CollegeCatalog();
@@ -28,8 +28,8 @@ public class College {
         return catalog;
     }
 
-    public void addCouses(SoftwareProgrammingCourse course){
-        this.catalog.addCourses(course);
+    public void addCouse(SoftwareProgrammingCourse course){
+        this.catalog.addCourse(course);
     }
     
     public void printCatalog(){
@@ -40,10 +40,10 @@ public class College {
     }
 
     public String getCollegeName() {
-        return collegeName;
+        return name;
     }
 
     public void setCollegeName(String collegeName) {
-        this.collegeName = collegeName;
+        this.name = collegeName;
     }
 }

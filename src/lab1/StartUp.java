@@ -17,11 +17,11 @@ public class StartUp {
         SoftwareProgrammingCourse programmingCourse3 = new AdvancedJavaCourse("Advanced Java Programming","152-135",4);
         College college = new College("WCTC");
         CollegeCatalog catalog = new CollegeCatalog();
-        catalog.addCourses(programingCourse1);
-        catalog.addCourses(programmingCourse2);
-        catalog.addCourses(programmingCourse3); 
-        programmingCourse2.setPrerequisites("Need to complete Intro Programming.");
-        programmingCourse3.setPrerequisites("Need to complete Java Programming.");
+        catalog.addCourse(programingCourse1);
+        catalog.addCourse(programmingCourse2);
+        catalog.addCourse(programmingCourse3); 
+        programmingCourse2.setPrerequisites("Need to complete Intro Programming course.");
+        programmingCourse3.setPrerequisites("Need to complete Java Programming course.");
         college.setCatalog(catalog);
         //System.out.println(college.getCatalog().getProgrammingCource().get(0).getCourseName());
         college.printCatalog();
