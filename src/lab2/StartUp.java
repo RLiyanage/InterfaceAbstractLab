@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab1;
+package lab2;
 
 /**
  *
@@ -22,7 +22,7 @@ public class StartUp {
         catalog.addCourse(programmingCourse3); 
         programmingCourse2.setPrerequisites("Need to complete Intro Programming course.");
         programmingCourse3.setPrerequisites("Need to complete Java Programming course.");
-        college.setCatalog(catalog);
+        college.addCouse(programingCourse1);
         //System.out.println(college.getCatalog().getProgrammingCource().get(0).getCourseName());
         college.setCollegeName("College Name: "+ "WCTC");
         report.printReport(college.getCollegeName());
